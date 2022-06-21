@@ -1,0 +1,30 @@
+package sqltext
+
+type CmdType int
+
+const (
+	NIL CmdType = iota
+	DO
+	LOCK
+	CALL
+	COPY
+	DROP
+	RULE
+	VIEW
+	ALTER
+	FETCH
+	INDEX
+	GRANT
+	CREATE
+	SELECT
+	UPDATE
+	INSERT
+	DELETE
+	CURSOR
+	EXPLAIN
+	PREPARE
+	EXECUTE
+	TRUNCATE
+	CHECKPOINT
+	TRANSACTION
+)
