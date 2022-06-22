@@ -24,10 +24,10 @@ Also the logic of a sql text can be very complex, we may need a method to find o
 ## Features
 This repository supports simple grammar analysis and plain text simplifying for different query languages.
 
-|                   | mysql  | postgresql | ...     |
-| :----:            | :----: | :----:     | :----:  |
-| Simplify Text     |        | √          |         |
-| Get Command Type  |        | √          |         |
+|                   | mysql  | postgresql         | ...     |
+| :----:            | :----: | :----:             | :----:  |
+| Simplify Text     |        | :heavy_check_mark: |         |
+| Get Command Type  |        | :heavy_check_mark: |         |
 
 ## Installation
 
