@@ -1,9 +1,10 @@
 # sqltext
-
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/sasakiyori/sqltext/Main)
+![License](https://img.shields.io/github/license/sasakiyori/sqltext)
+![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/sasakiyori/sqltext)
+[![GoReportCard](https://goreportcard.com/badge/sasakiyori/sqltext)](https://goreportcard.com/report/github.com/sasakiyori/sqltext)
 
 ## Table of contents
-  - [sqltext](#sqltext)
-  - [Table of contents](#table-of-contents)
   - [Background](#background)
   - [Features](#features)
   - [Installation](#installation)
