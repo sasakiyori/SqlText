@@ -24,10 +24,10 @@ Also the logic of a sql text can be very complex, we may need a method to find o
 ## Features
 This repository supports simple grammar analysis and plain text simplifying for different query languages.
 
-|                   | mysql  | postgresql | etc |
-| :----:            | :----: | :----:     |     |
-| Simplify Text     |        | √          |     |
-| Get Command Type  |        | √          |     |
+|                   | mysql  | postgresql | ...     |
+| :----:            | :----: | :----:     | :----:  |
+| Simplify Text     |        | √          |         |
+| Get Command Type  |        | √          |         |
 
 ## Installation
 
@@ -44,7 +44,7 @@ This is a pre-release version, not ready yet.
 ## Contributing
 [Issues](https://github.com/sasakiyori/sqltext/issues/new) and [PRs](https://github.com/sasakiyori/sqltext/pulls) are welcome!
 
-This project is just starting, lack of massy documentations, method completions, query language extensions and test case coverages. Thanks in advance for all contributions for this repository :pray::pray::heart:
+This project is just starting, lack of massy documentations, method completions, query language extensions and test case coverages. Thanks in advance to all contributors of this repository :heart:
 
 ## License
 [MIT License](LICENSE)
