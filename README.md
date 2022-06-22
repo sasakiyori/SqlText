@@ -15,17 +15,36 @@
   - [License](#license)
 
 ## Background
+In some scenarios, programs will receive a plain sql text from upstream and then transfer to others or execute it locally.
+
+We can't expect the sql text is always concise and highly readable, because the habits of sql writers are different. This will confuse coders when they want to do some analysis out of database tools. Since the sql text may has messy format with a lot of comments, meaningless blank spaces and line feeds, we may need some methods to simplify the sql text.
+
+Also the logic of a sql text can be very complex, we may need a method to find out what it does and what it affects.
 
 ## Features
+This repository supports simple grammar analysis and plain text simplifying for different query languages.
+
+|                   | mysql  | postgresql | etc |
+| :----:            | :----: | :----:     |     |
+| Simplify Text     |        | √          |     |
+| Get Command Type  |        | √          |     |
 
 ## Installation
 
+```shell
+go get github.com/sasakiyori/sqltext
+```
+
 ## Usage
+This is a pre-release version, not ready yet.
 
 ## Documentation
+This is a pre-release version, not ready yet.
 
 ## Contributing
 [Issues](https://github.com/sasakiyori/sqltext/issues/new) and [PRs](https://github.com/sasakiyori/sqltext/pulls) are welcome!
+
+This project is just starting, lack of massy documentations, method completions, query language extensions and test case coverages. Thanks in advance for all contributions for this repository :pray::pray::heart:
 
 ## License
 [MIT License](LICENSE)
