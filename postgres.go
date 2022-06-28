@@ -49,6 +49,7 @@ func (t PostgresqlText) RemoveComments(sql string) string {
 }
 
 func (t PostgresqlText) FormatText(sql string) string {
+	sql = t.RemoveComments(sql)
 	sql = SkipSpacesFromHead(sql)
 	quote := 0 // single quote num
 	index, end := 0, len(sql)
@@ -157,7 +158,7 @@ func (t PostgresqlText) CommandType(sql string) (CmdType, error) {
 	}
 }
 
-func (t PostgresqlText) ReadonlyCommand(sql string) bool {
+func (t PostgresqlText) Readonly(sql string) bool {
 	ct, err := t.CommandType(sql)
 	if err != nil {
 		return false

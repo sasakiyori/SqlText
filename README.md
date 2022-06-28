@@ -10,7 +10,6 @@
   - [Features](#features)
   - [Installation](#installation)
   - [Usage](#usage)
-  - [Documentation](#documentation)
   - [Contributing](#contributing)
   - [License](#license)
 
@@ -36,10 +35,23 @@ go get github.com/sasakiyori/sqltext
 ```
 
 ## Usage
-This is a pre-release version, not ready yet.
+```go
+// use New() to create a processor with a specific sql type
+processor := sqltext.New(sqltext.Postgresql)
+// or use the specific sql type function to create a processor
+processor = sqltext.WithPostgresql()
 
-## Documentation
-This is a pre-release version, not ready yet.
+// only remove comments
+rc := processor.RemoveComments(text)
+// remove comments, then decrease blank spaces and line feeds, finally get an one-line sql text.
+ft := processor.FormatText(text)
+
+// get the command type of sql text
+cmdType := processor.CommandType(text)
+// maybe you only consider about if the sql text is involved in write-operation or not
+readonly := processor.Readonly(text)
+
+```
 
 ## Contributing
 [Issues](https://github.com/sasakiyori/sqltext/issues/new) and [PRs](https://github.com/sasakiyori/sqltext/pulls) are welcome!

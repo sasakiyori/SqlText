@@ -4,7 +4,7 @@ import (
 	"testing"
 )
 
-func TestPostgresqlText(t *testing.T) {
+func TestPostgresqlFormatText(t *testing.T) {
 	pg := PostgresqlText{}
 	testCases := []struct {
 		name   string
@@ -55,7 +55,7 @@ select * from test_a;`,
 
 	for _, tc := range testCases {
 		t.Run(tc.name, func(t *testing.T) {
-			res := pg.FormatText(pg.RemoveComments(tc.input))
+			res := pg.FormatText(tc.input)
 			if res != tc.output {
 				t.Errorf("FormatText expect: %s, actual: %s", tc.output, res)
 			}
@@ -101,8 +101,8 @@ func TestPostgresqlCommandType(t *testing.T) {
 			if ct, err := pg.CommandType(tc.sql); err != nil || ct != tc.cmdType {
 				t.Errorf("CommandType expect: %d, actual: %d, error: %v", tc.cmdType, ct, err)
 			}
-			if ro := pg.ReadonlyCommand(tc.sql); ro != tc.readonly {
-				t.Errorf("ReadonlyCommand expect: %t, actual: %t", tc.readonly, ro)
+			if ro := pg.Readonly(tc.sql); ro != tc.readonly {
+				t.Errorf("Readonly expect: %t, actual: %t", tc.readonly, ro)
 			}
 		})
 	}
