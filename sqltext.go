@@ -10,6 +10,19 @@ type SqlText interface {
 	// CommandType command type of sql text
 	CommandType(sql string) (CmdType, error)
 
-	// ReadonlyCommand check out if the sql is readonly command
-	ReadonlyCommand(sql string) bool
+	// Readonly check out if the sql is a readonly command
+	Readonly(sql string) bool
+}
+
+func New(t SqlType) SqlText {
+	switch t {
+	case Postgresql:
+		return WithPostgresql()
+	default:
+		return nil
+	}
+}
+
+func WithPostgresql() SqlText {
+	return &PostgresqlText{}
 }
